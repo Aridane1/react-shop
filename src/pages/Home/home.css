@@ -1,0 +1,22 @@
+body {
+  background-color: #ececec;
+}
+
+.text-home {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+}
+.text-inicio {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.text-explained {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 20px 0 20px;
+}
