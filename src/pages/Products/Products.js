@@ -7,13 +7,13 @@ function Products() {
   return (
     <>
       <Header />
-
       <div className="products">
         <div className="title-products">
           <h2>Productos</h2>
         </div>
         <Cards />
       </div>
+
       <Footer />
     </>
   );

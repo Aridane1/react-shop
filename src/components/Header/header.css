@@ -5,11 +5,13 @@
 }
 
 .header-nav {
+  position: relative;
   text-decoration: none;
   margin: 0.5%;
   margin-top: 5vh;
   list-style: none;
   width: 95%;
+  justify-content: end;
 }
 
 .header-a {
@@ -54,7 +56,6 @@ ul {
     display: none;
     flex-direction: column;
     text-align: end;
-    margin-right: 3vw;
     transform: scale(1);
   }
 
@@ -65,6 +66,7 @@ ul {
   .header-li {
     display: flex;
     flex-direction: column;
+    
   }
 
   .button-menu {
@@ -100,11 +102,9 @@ ul {
   }
 
   .header-nav {
-    position: fixed;
+    position: absolute;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    left: 30%;
   }
 
   .header-li {

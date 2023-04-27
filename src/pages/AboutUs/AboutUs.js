@@ -1,16 +1,13 @@
-import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import { Carousel } from "rsuite";
-import "./home.css";
-import { useState } from "react";
-function Home() {
-  const [activeIndex, setActiveIndex] = useState(2);
+import Header from "../../components/Header/Header";
+import './about-us.css'
+function AboutUs() {
   return (
     <>
       <Header />
-      <div className="text-home">
-        <div className="text-inicio">
-          <h2>INICIO</h2>
+      <div className="text-about">
+        <div className="text-about-us">
+          <h2>QUIENES SOMOS</h2>
         </div>
         <div className="text-explained">
           <p>
@@ -49,4 +46,4 @@ function Home() {
     </>
   );
 }
-export default Home;
+export default AboutUs;

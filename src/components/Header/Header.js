@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+
 import { useState } from "react";
 
 function Header() {
@@ -39,13 +40,13 @@ function Header() {
       <div className={`header-nav ${menu ? "isActive" : ""} ` }>
         <ul>
           <li className="header-li">
-            <a href="/" className="header-a">
+            <a href="/home" className="header-a">
               Home
             </a>
-            <a href="/productos" className="header-a">
+            <a href="/products" className="header-a">
               Productos
             </a>
-            <a href="/carrito" className="header-a">
+            <a href="/shopping-cat" className="header-a">
               <FontAwesomeIcon icon={faCartShopping} />
             </a>
           </li>

@@ -1,14 +1,13 @@
 import ProductsService from "../../services/products.services";
-import { useEffect, useState } from "react";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState, useRef } from "react";
 import "./card-style.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import ShoppingCart from "../../pages/ShoppingCart/ShoppingCart";
 
 function Cards() {
+  const selectedProducts = useRef([]);
   const [products, setProducts] = useState([]);
   const [query, setQuery] = useState("");
-  const [buttonValue, setButtonValue] = useState([{}]);
+  
+
   const getProducts = () => {
     const allProducts = ProductsService.getProducts();
     setProducts(allProducts);
@@ -19,10 +18,14 @@ function Cards() {
     setQuery(searchValue);
   };
 
-  const handleButtonChange = (e) => {
-    const productValue = e.target.value;
-    setButtonValue(productValue);
-    console.log(setButtonValue);
+  const handleClick = (p) => {
+    selectedProducts.current.push(p);
+
+    localStorage.setItem("products", JSON.stringify(selectedProducts.current));
+
+    const auxProducts = localStorage.getItem("products");
+    console.log("resultado");
+    console.log(JSON.parse(auxProducts));
   };
 
   const showProducts = () => {
@@ -34,7 +37,7 @@ function Cards() {
             <div className="card">
               <div className="card-content">
                 <div className="card-img">
-                  <img src={`/assents/productos/${p.img}`} alt="productos" />
+                  <img src={`/assents/products/${p.img}`} alt="productos" />
                 </div>
                 <div className="card-body">
                   <p>
@@ -42,12 +45,12 @@ function Cards() {
                   </p>
                   <p>{p.type}</p>
                   <p>
-                    <input
-                      type="submit"
+                    <button
                       className="card-input"
-                      onClick={handleButtonChange}
-                      value={"Añdir al carrito"}
-                    />
+                      onClick={() => handleClick(p)}
+                    >
+                      Enviar al carrito
+                    </button>
                   </p>
                 </div>
               </div>

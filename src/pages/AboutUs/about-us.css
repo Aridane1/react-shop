@@ -2,12 +2,12 @@ body {
   background-color: #ececec;
 }
 
-.text-home {
+.text-about {
   margin-top: 2%;
   display: flex;
   flex-direction: column;
 }
-.text-inicio {
+.text-about-us {
   display: flex;
   justify-content: center;
 }

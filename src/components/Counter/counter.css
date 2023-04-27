@@ -1,0 +1,16 @@
+.counter {
+  display: flex;
+  justify-content: space-evenly;
+}
+.counter-body {
+  display: flex;
+  justify-content: end;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.counter-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
