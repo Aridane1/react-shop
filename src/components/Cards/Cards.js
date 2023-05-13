@@ -6,11 +6,21 @@ function Cards() {
   const selectedProducts = useRef([]);
   const [products, setProducts] = useState([]);
   const [query, setQuery] = useState("");
-  
 
-  const getProducts = () => {
-    const allProducts = ProductsService.getProducts();
-    setProducts(allProducts);
+  const getAllProducts = () => {
+    ProductsService.getAllProducts().then((data) => {
+      let allProducts = [];
+      data.forEach((item) => {
+        allProducts.push({
+          key: item.key,
+          img: item.val().img,
+          name: item.val().name,
+          type: item.val().type,
+          price: item.val().price,
+        });
+      });
+      setProducts(allProducts);
+    });
   };
 
   const handleChange = (event) => {
@@ -37,7 +47,7 @@ function Cards() {
             <div className="card">
               <div className="card-content">
                 <div className="card-img">
-                  <img src={`/assents/products/${p.img}`} alt="productos" />
+                  <img src={p.img} alt="productos" />
                 </div>
                 <div className="card-body">
                   <p>
@@ -61,7 +71,7 @@ function Cards() {
   };
 
   useEffect(() => {
-    getProducts();
+    getAllProducts();
   }, []);
 
   return (

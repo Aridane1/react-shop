@@ -10,12 +10,12 @@ function FindUsAt() {
       <Header />
       <div>
         <div>
-          <h2>Location Shops</h2>
+          <h2>
+            <p>Location Shops</p>
+          </h2>
         </div>
         <div>
-          <Shopmap
-            shops={currentShopList}
-          />
+          <Shopmap shops={currentShopList} />
         </div>
       </div>
       <Footer />

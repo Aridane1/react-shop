@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>Tomate</title>
+  <description>Tomate fresco y jugoso</description>
+  <fecha_publicacion>2023, 5, 13</fecha_publicacion>
+  <item>
+     <title>Lechuga</title>
+  <description>Lechuga crujiente y nutritiva</description>
+  <fecha_publicacion></fecha_publicacion>
+  </item>
+  <item>
+     <title>Papas</title>
+  <description>Papas jugosas</description>
+  <fecha_publicacion>2023, 6, 12</fecha_publicacion>
+  </item>
+</channel>
+</rss>

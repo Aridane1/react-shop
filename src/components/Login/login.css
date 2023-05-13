@@ -1,0 +1,43 @@
+.container-form {
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.container-error {
+  flex-direction: column;
+}
+
+.form-user {
+  padding: 15px;
+  border: 1px black solid;
+  border-radius: 15px;
+  display: flex;
+  position: relative;
+  top: 150%;
+}
+
+.button-form {
+  display: flex;
+  margin-top: 15px;
+  justify-content: center;
+}
+
+.form-a {
+  color: #000;
+  transform: scale(0.7);
+}
+
+.button-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-form > button {
+  background-color: aqua;
+  padding: 10px 15px;
+  border-radius: 50px;
+}

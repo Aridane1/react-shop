@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Counter from "../Counter/Counter";
 
-function FormSale({addToFinalPrice, setInitialTotalPrice}) {
+function FormSale({ addToFinalPrice, setInitialTotalPrice }) {
   const [products, setProducts] = useState([]);
 
   const getData = () => {
@@ -11,15 +11,17 @@ function FormSale({addToFinalPrice, setInitialTotalPrice}) {
 
   const addCounterToProduct = (quantity, unitPrice) => {
     addToFinalPrice(quantity * unitPrice);
-  }
+  };
 
   const getInitialTotalPrice = () => {
     let auxInitialTotalPrice = 0;
-    products.forEach((p) => {
-      auxInitialTotalPrice += p.price;
-    })
+    if (products != null) {
+      products.forEach((p) => {
+        auxInitialTotalPrice += p.price;
+      });
+    }
     return auxInitialTotalPrice;
-  }
+  };
 
   useEffect(() => {
     setProducts(getData());
@@ -30,34 +32,40 @@ function FormSale({addToFinalPrice, setInitialTotalPrice}) {
   }, [products]);
 
   const listProduct = () => {
-    return products.map((p) => {
-      return (
-        <>
-          <li key={p.id}>
-            <div className="card">
-              <div className="card-content">
-                <div className="card-img">
-                  <img src={`/assents/products/${p.img}`} alt="products" />
-                </div>
-                <div className="card-body">
-                  <p>
-                    {p.name} - {p.price}€ por kg
-                  </p>
-                  <Counter addCounterToProduct={(q) => addCounterToProduct(q, p.price)}/>
+    if (products != null) {
+      return products.map((p) => {
+        return (
+          <>
+            <li key={p.id}>
+              <div className="card">
+                <div className="card-content">
+                  <div className="card-img">
+                    <img src={p.img} alt="products" />
+                  </div>
+                  <div className="card-body">
+                    <p>
+                      {p.name} - {p.price}€ por kg
+                    </p>
+                    <Counter
+                      addCounterToProduct={(q) =>
+                        addCounterToProduct(q, p.price)
+                      }
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-          </li>
-        </>
-      );
-    });
+            </li>
+          </>
+        );
+      });
+    }
   };
+
   return (
     <>
       <div className="main-container">
         <div className="card-container">{listProduct()}</div>
       </div>
-
     </>
   );
 }

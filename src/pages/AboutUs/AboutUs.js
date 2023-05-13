@@ -1,45 +1,37 @@
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
-import './about-us.css'
+import "./about-us.css";
 function AboutUs() {
   return (
     <>
       <Header />
       <div className="text-about">
         <div className="text-about-us">
-          <h2>QUIENES SOMOS</h2>
+          <h2>QUIÉNES SOMOS</h2>
         </div>
         <div className="text-explained">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-            eros nisi, ultrices a pharetra at, finibus sit amet nulla.
-            Vestibulum suscipit dignissim mauris id suscipit. Proin id lacus vel
-            urna semper vehicula in vel ante. Nunc non tellus a arcu
-            pellentesque vulputate. Proin faucibus tempus erat sit amet
-            eleifend. Vivamus vitae tincidunt quam. In scelerisque risus vel
-            congue rutrum. In quis ultrices nunc. Quisque sed mi ex. Donec non
-            lacus lorem. Vivamus urna sapien, cursus quis magna eu, finibus
-            auctor ante. Proin ornare vehicula nunc, sit amet facilisis nulla
-            viverra bibendum. Sed iaculis imperdiet ipsum at interdum. Vivamus
-            erat nisl, lobortis nec feugiat vitae, mattis non odio. Sed laoreet
-            sem ipsum, ac efficitur justo venenatis a.
+            Bienvenidos a nuestra tienda de productos agrícolas. Somos un
+            establecimiento dedicado a ofrecer una amplia variedad de productos
+            de origen vegetal para satisfacer las necesidades de nuestros
+            clientes. Nuestra tienda está compuesta por un equipo de
+            profesionales altamente capacitados y experimentados en el campo de
+            la agricultura, quienes trabajan arduamente para garantizar la
+            calidad y frescura de nuestros productos. Nos enorgullece trabajar
+            con agricultores locales y proveedores confiables que comparten
+            nuestra pasión por la agricultura sostenible y la producción
+            responsable de alimentos. En nuestra tienda, encontrará una amplia
+            variedad de frutas y verduras frescas, así como productos orgánicos
+            y de temporada. Además, también ofrecemos una selección de productos
+            agrícolas procesados, como mermeladas, conservas y salsas, todos
+            ellos elaborados con los ingredientes más frescos y de alta calidad.
+            En resumen, somos una tienda de productos agrícolas comprometida con
+            la calidad, la frescura y la sostenibilidad. Estamos aquí para
+            ofrecerle los mejores productos agrícolas posibles y para brindarle
+            una experiencia de compra satisfactoria. ¡Gracias por visitarnos!
           </p>
           <br></br>
-          <p>
-            Mauris non consectetur erat. Nam consequat libero id est
-            pellentesque pellentesque. Praesent et ultrices augue, ut sodales
-            mi. Donec lobortis gravida ligula quis vestibulum. Aenean ut leo
-            malesuada, dictum odio sed, sollicitudin quam. Fusce eget enim
-            mauris. Integer suscipit sem vel venenatis volutpat. Vestibulum
-            scelerisque nisi lacus, at varius diam convallis non. Ut sit amet
-            dolor urna. Duis vitae commodo magna. Etiam libero augue, gravida et
-            nisl imperdiet, egestas fringilla turpis. Proin in ultrices nibh.
-            Mauris arcu leo, lacinia gravida varius id, gravida semper augue.
-            Quisque suscipit consectetur lectus, a aliquet dolor aliquet ut.
-            Quisque et sapien eu lorem egestas fermentum. Suspendisse lacinia,
-            ipsum at varius tempor, diam libero interdum dui, at aliquam mi arcu
-            ac arcu.
-          </p>
+         
         </div>
       </div>
       <Footer />

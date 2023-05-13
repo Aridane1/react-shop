@@ -45,6 +45,28 @@ ul {
   cursor: pointer;
 }
 
+.sign-in.isLogin {
+  display: none;
+}
+.sign-up.isLogin {
+  display: none;
+}
+
+.sign-in.isNotLogin {
+  display: block;
+}
+.sign-up.isNotLogin {
+  display: block;
+}
+
+.sign-out.isLogin {
+  display: block;
+}
+
+.sign-out.isNotLogin {
+  display: none;
+}
+
 @media (min-width: 300px) {
   .header {
     display: flex;
@@ -66,7 +88,6 @@ ul {
   .header-li {
     display: flex;
     flex-direction: column;
-    
   }
 
   .button-menu {
