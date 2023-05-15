@@ -14,6 +14,19 @@ function Comment() {
 
   const { user } = useAuth();
 
+  const getUser = () => {
+    UsersServices.getUserName().then((data) => {
+      let auxNameUser = "";
+      data.forEach((item) => {
+        if (item.val().email === user.email) {
+          auxNameUser = item.val().userName;
+        } else {
+        }
+      });
+      setUserName(auxNameUser);
+    });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     let nameUser = e.target.userName.value;
@@ -27,31 +40,18 @@ function Comment() {
 
   const handleSubmitUpdate = (e) => {
     e.preventDefault();
-
     let key = e.target.key.value;
     let comment = e.target.comment.value;
 
     CommentsServices.updateComment(key, comment, userName).then(() => {
       getAllComments();
-    });
 
-    document.getElementsByClassName("container-form-add")[0].style.display =
-      "block";
+      document.getElementsByClassName("container-form-add")[0].style.display =
+        "block";
 
-    document.getElementsByClassName("container-form-update")[0].style.display =
-      "none";
-  };
-
-  const getUser = () => {
-    UsersServices.getUserName().then((data) => {
-      let auxNameUser = "";
-      data.forEach((item) => {
-        if (item.val().email === user.email) {
-          auxNameUser = item.val().userName;
-        } else {
-        }
-      });
-      setUserName(auxNameUser);
+      document.getElementsByClassName(
+        "container-form-update"
+      )[0].style.display = "none";
     });
   };
 
@@ -105,8 +105,7 @@ function Comment() {
             <label>{c.userName}</label>
           </div>
           <div className="comment-text">
-            <textarea className="comment-text-area" disabled>
-              {c.comment}
+            <textarea className="comment-text-area" disabled value={c.comment}>
             </textarea>
           </div>
           {userName === c.userName ? (
