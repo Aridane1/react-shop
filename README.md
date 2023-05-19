@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# Hosting
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Name page: https://react-shop-app-9586d.web.app
+
+# FeedReader
+
+![alt text](https://github.com/Aridane1/react-shop/blob/master/screenshots/captura_feed-reader.PNG)
+
+# Getting Started with Create React App
 
 ## Available Scripts
 

@@ -26,7 +26,7 @@ function Footer() {
                 Comentarios
               </a>
             </li>
-            <a href="/infProducts.rss" className="footer-a">
+            <a href="/infProducts.xml" className="footer-a">
                 <FontAwesomeIcon icon={faRss} />
               </a>
           </ul>

@@ -1,0 +1,30 @@
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-body {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 10px;
+}
+
+.new {
+  margin: 10px;
+}
+
+.new-img {
+  margin-left: 15px;
+}
+
+@media only screen and (min-width: 300px) {
+  .content-body {
+    flex-direction: column;
+    margin: 10px;
+    align-items: center;
+  }
+  .new-img {
+    width: 50%;
+  }
+}
+

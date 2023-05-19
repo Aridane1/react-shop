@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useAuth } from "../../context/authContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import UsersServices from "../../services/users.services";
 export default function Register() {
+  const { id } = useParams();
   const [user, setUser] = useState({
     email: "",
     password: "",

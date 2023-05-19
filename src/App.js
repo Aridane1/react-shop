@@ -10,6 +10,7 @@ import Register from "./components/Register/Register";
 import AuthProvider from "./context/authContext";
 import { ProtectedRoute } from "./components/ProtectedRoute/ProtectedRoute";
 import Comment from "./pages/Comment/Comment";
+import News from "./pages/News/News";
 function App() {
   return (
     <div className="App">
@@ -39,6 +40,7 @@ function App() {
                 </ProtectedRoute>
               }
             />
+            <Route path="/news/:id" element={<News />} />
           </Routes>
         </BrowserRouter>
       </AuthProvider>
